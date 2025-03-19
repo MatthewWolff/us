@@ -10,10 +10,10 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
   <!-- css -->
-  <script src="https://bootstrap-awesome.herokuapp.com/?dt=us"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link type="text/css" href="font-awesome/css/font-awesome.css" rel="stylesheet" />
-  <link type="text/css" href="us.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap" rel="stylesheet">
+  <!--  <link type="text/css" href="us.css" rel="stylesheet" />-->
 
   <!-- meta properties -->
   <meta charset="utf-8">
@@ -29,7 +29,13 @@
   <meta name="title" content="🥺 us 🥺">
   <meta name="description" content="me and junjun">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124581164-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -39,11 +45,218 @@
     }
 
     gtag('js', new Date());
-
-    gtag('config', 'UA-124581164-1', {
-      'page_title': 'me_and_arjun',
-    });
+    gtag('config', 'me_and_arjun');
   </script>
+
+  <style>
+    @keyframes bang {
+      from {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+      }
+    }
+
+    .clickme {
+      width: 240px;
+      margin: 150px auto 0;
+      text-align: center;
+      padding: 10px 0;
+      cursor: pointer;
+      position: relative;
+
+      span {
+        color: #333;
+        font-size: .9em;
+      }
+
+      i {
+        position: absolute;
+        display: block;
+        left: 50%;
+        top: 0;
+        width: 3px;
+        height: 8px;
+        background: red;
+        opacity: 0;
+      }
+    }
+
+    .us {
+      padding: 10px 0;
+      width: 60%;
+      border-radius: 30px; /* Added rounded corners */
+    }
+
+    .intro {
+      display: table;
+      width: 100%;
+      height: 100%;
+      padding: 100px 0;
+      text-align: center;
+      color: white;
+      background: url('img/me_and_arjun.jpg') repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: 150px 150px; /* Made the tiled image smaller */
+      -o-background-size: cover;
+    }
+
+    .intro .intro-body {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .intro .intro-body .intro-text {
+      padding-right: 0px;
+      font-size: 18px;
+    }
+
+    @media (min-width: 768px) {
+      .intro {
+        height: 100%;
+        padding: 0;
+      }
+
+      .intro .intro-body .brand-heading {
+        font-size: 100px;
+      }
+
+      .intro .intro-body .intro-text {
+        font-size: 26px;
+      }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0 0 35px;
+      font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .btn-circle {
+      width: 70px;
+      height: 70px;
+      margin-top: 15px;
+      padding: 7px 16px;
+      border: 2px solid white;
+      border-radius: 100% !important;
+      font-size: 16px;
+      color: white;
+      background: #7b7b7b; /* Filled button with color */
+      -webkit-transition: background 0.3s ease-in-out;
+      -moz-transition: background 0.3s ease-in-out;
+      transition: background 0.3s ease-in-out;
+    }
+
+    .btn-circle:hover {
+      background: #494949; /* Darker pink on hover */
+    }
+
+    .btn-circle:hover {
+      background: #b0b0b0; /* Lighter grey on hover */
+    }
+    .btn-circle:active {
+      background: white; /* Turns white when clicked */
+      color: black;
+    }
+
+    .btn-circle i.animated {
+      -webkit-transition-property: -webkit-transform;
+      -webkit-transition-duration: 1s;
+      -moz-transition-property: -moz-transform;
+      -moz-transition-duration: 1s;
+    }
+
+    .btn-circle:hover i.animated {
+      -webkit-animation-name: pulse;
+      -moz-animation-name: pulse;
+      -webkit-animation-duration: 1.5s;
+      -moz-animation-duration: 1.5s;
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
+    }
+
+    @-webkit-keyframes pulse {
+      0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+
+      50% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+      }
+
+      100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+
+    @-moz-keyframes pulse {
+      0% {
+        -moz-transform: scale(1);
+        transform: scale(1);
+      }
+
+      50% {
+        -moz-transform: scale(1.2);
+        transform: scale(1.2);
+      }
+
+      100% {
+        -moz-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+
+    .btn {
+      text-transform: uppercase;
+      font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      border-radius: 0;
+    }
+
+    .btn-default {
+      border: 1px solid #FFFFFF;
+      color: #FFFFFF;
+      background-color: transparent;
+    }
+
+    .btn-default:hover,
+    .btn-default:focus {
+      border: 1px solid #FFFFFF;
+      outline: none;
+      color: black;
+      background-color: #FFFFFF;
+    }
+    body, h2, h4 {
+      font-family: 'Comic Sans MS', cursive; /* Applied exciting font */
+    }
+    h2.brand-heading {
+      background-color: #5a5a5a; /* Added black background */
+      color: white; /* Text color set to white for contrast */
+      padding: 10px 20px; /* Added padding for spacing */
+      border-radius: 15px; /* Rounded corners */
+      margin-top: 20px; /* Space above the header */
+    }
+    h4.brand-heading2, p.brand-heading2 {
+      background-color: #5a5a5a; /* Added black background */
+      color: white; /* Text color set to white for contrast */
+      padding: 10px 20px; /* Added padding for spacing */
+      border-radius: 15px; /* Rounded corners */
+      margin-top: 20px; /* Space above the header */
+      width: 70%;
+      text-align: center; /* Center the text */
+      margin-left: auto; /* Center the block element */
+      margin-right: auto; /* Center the block element */
+    }
+  </style>
 
 </head>
 
@@ -54,13 +267,14 @@
         <div class="row">
           <div class="col-lg-12">
             <h2 class="brand-heading"> Us </h2>
+            <h4 class="brand-heading2">Congratulations to my husband Arjun on his new job.<br/> I love him very much 🥺 Good job!!!</h4>
             <button class="clickme btn btn-circle" type="submit">
               <span>
                 <i class="fa animated"> us. </i>
               </span>
             </button>
             <div><img class="us" src="img/me_and_arjun.jpg"></div>
-            <p class="intro-text"> you and me, junjun :) </p>
+            <p class="intro-text brand-heading2" style="width: 50%"> you and me, junjun :) </p>
           </div>
         </div>
       </div>
@@ -68,7 +282,30 @@
   </header>
 </body>
 <footer>
-  <script type="text/javascript" src="us.js"></script>
+<!--  <script type="text/javascript" src="us.js"></script>-->
+  <script>
+    $('button').on('click', function() {
+      window.alert("us");
+      function random(max) {
+        return Math.random() * (max - 0);
+      }
+
+      var c = document.createDocumentFragment();
+      for (var i = 0; i < 100; i++) {
+        var styles = 'transform: translate3d(' + (random(500) - 250) + 'px, ' + (random(200) - 150) + 'px, 0) rotate(' + random(360) + 'deg);\
+                  background: hsla(' + random(360) + ',100%,50%,1);\
+                  animation: bang 700ms ease-out forwards;\
+                  opacity: 0';
+
+        var e = document.createElement("i");
+        e.style.cssText = styles.toString();
+        c.appendChild(e);
+      }
+      $(this).append(c);
+
+    })
+
+  </script>
 </footer>
 
 </html>
